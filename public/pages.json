@@ -1,0 +1,20 @@
+[
+    {
+      "link": { "text": "homme", "url": "indx.html" },
+      "pageTitle": "hello homme page ",
+      "content": "je suis le contenue de la page homme ",
+      "published":true
+    },
+    {
+      "link": { "text": "about", "url": "about.html" },
+      "pageTitle": "hello about page ",
+      "content": "je suis le contenue de la page about ",
+      "published":true
+    },
+    {
+      "link": { "text": "contact", "url": "contact.html" },
+      "pageTitle": "hello contact page",
+      "content": "je suis le contenue de la page contact ",
+      "published":false
+    }
+ ]
