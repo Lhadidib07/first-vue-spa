@@ -9,12 +9,12 @@
       "link": { "text": "about", "url": "about.html" },
       "pageTitle": "hello about page ",
       "content": "je suis le contenue de la page about ",
-      "published":true
+      "published":false
     },
     {
       "link": { "text": "contact", "url": "contact.html" },
       "pageTitle": "hello contact page",
       "content": "je suis le contenue de la page contact ",
-      "published":false
+      "published":true
     }
  ]

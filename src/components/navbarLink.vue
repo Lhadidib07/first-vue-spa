@@ -1,20 +1,18 @@
 <template>
-  <li>
-    <a
-      class="nav-link"
-      :class="activeClasses"
-      aria-current="page"
-      :href="page.link.url"
-      :title="`this link goes to ${page.link.text} page `"
-      @click.prevent="$bus.$emit('navbarLinkAtivated', index)"
-      >{{ page.link.text }}
-    </a>
-  </li>
+  <router-Link
+    :to="`/${index}`"
+     class="nav-link"
+     active-class="active"
+     aria-current="page"
+    :href="page.link.url"
+    :title="`this link goes to ${page.link.text} page `">
+    {{ page.link.text }}
+  </router-Link>
 </template>
 
 <script>
 export default {
-  props: ["page", "index", "isActive"],
+  props: ["page", "isActive" , "index"],
   computed: {
     activeClasses() {
       return {
@@ -24,5 +22,4 @@ export default {
   },
 };
 </script>
-
 

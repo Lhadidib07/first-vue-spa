@@ -5,13 +5,23 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">My Vue</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <navbar-link
-          v-for="(page, index) in publishedPages"
-          :key="index"
-          :index="index"
-          :page="page"
-          :isActive="activePage == index"
-          @click.prevent="navLinkClick(index)"></navbar-link>
+        <li v-for="(page, index) in pages" class="nav-item" :key="index">
+          <navbar-link
+            :page="page"
+            :isActive="activePage === index"
+            :index ="index"
+          >
+          </navbar-link>
+        </li>
+        <li>
+          <router-Link
+            :to="'/create'"
+            active-class="active"
+            class="nav-link"
+            aria-current="page"
+          > create
+          </router-Link>
+        </li>
       </ul>
       <form action="" class="d-flex">
         <button class="btn btn-primary" @click.prevent="changeTheme()">
@@ -26,11 +36,6 @@
 import navbarLink from "./navbarLink.vue";
 
 export default {
-  computed: {
-    publishedPages() {
-      return this.pages.filter((p) => p.published);
-    },
-  },
   components: {
     navbarLink,
   },
