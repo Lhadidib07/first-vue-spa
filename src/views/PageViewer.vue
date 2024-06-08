@@ -8,6 +8,8 @@
 <script>
 export default {
   props: ['index'], 
+  // ici nous allons recevoir les pages que nouv avon injecter grace au provide 
+  inject:['$pages'], // on le recupre grace a la clé que nous avons definie dans le provide dans main.js 
   data() {
     return {
       page: null,

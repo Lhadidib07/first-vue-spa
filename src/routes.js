@@ -1,8 +1,9 @@
 import {createRouter , createWebHashHistory} from 'vue-router'; 
-import PageViewer from './views/PageViewer.vue';
+import PageViewer from './views/PageViewer.vue'; 
 import CreatePage from './views/CreatePage.vue';
 import Pages from './views/Pages.vue';
 import PagesList from './views/PagesList.vue';
+import PageEdit from './views/PageEdit.vue';
 
 const router = createRouter({
     history : createWebHashHistory(), 
@@ -13,8 +14,9 @@ const router = createRouter({
             path : '/pages',
             component : Pages,
             children:[ 
+                 {path :'', component:PagesList},
                  {path : 'create', component:CreatePage},
-                 {path :'boutonPage', component:PagesList} 
+                 {path :':index/edit', component:PageEdit ,props:true}
             ]
  
         }
@@ -23,3 +25,4 @@ const router = createRouter({
 })
 
 export default router ; 
+

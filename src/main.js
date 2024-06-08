@@ -10,6 +10,10 @@ const app = createApp(App);
 
 app.use(router); 
 
-app.config.globalProperties.$pages = $pages ; 
+// app.config.globalProperties.$pages = $pages ; 
+
+            // clé  , value 
+app.provide('$pages',$pages); // provide pages to all childrens so all componnents 
+// go to page viewer 
 
 app.mount('#app');
