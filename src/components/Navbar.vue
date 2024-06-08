@@ -41,16 +41,21 @@ export default {
   },
   created() {
     this.getThemeStting();
+    this.fetchPages(); 
   },
-  props: ["pages", "ActivePage", "navLinkClick"],
 
   data() {
     return {
       theme: "light",
+      pages:null
     };
   },
 
   methods: {
+    fetchPages() {
+      // Assurez-vous que `$pages` est correctement défini et accessible
+      this.pages = this.$pages.getAllPages();
+    },
     changeTheme() {
       let theme = "light";
       if (this.theme == "light") {
