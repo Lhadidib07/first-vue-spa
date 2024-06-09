@@ -15,11 +15,11 @@
         </li>
         <li>
           <router-Link
-            :to="'/create'"
+            :to="'/pages'"
             active-class="active"
             class="nav-link"
             aria-current="page"
-          > create
+          > Pages Managment
           </router-Link>
         </li>
       </ul>
